@@ -83,8 +83,83 @@ var aCities = ["Karachi", "Lahore", "Islamabad", "Faisalabad"];
 
 var o = ["th","st","nd","rd"];
 
-for (i=0; i <aCities.length; i++ )
-document.write(o[i+1] + " choice is " + aCities[0]         );
+for (i=0; i < aCities.length-1; i++ ) {
+    document.write( "<p>" + (i+1) + o[i+1] + " choice is " + aCities[i]);
+}
+
+
+///// ques 7 /////
+
+var a = [10,20,4,40,60,70];
+var b = [1,2,3,4,5,6,7,8,9,10];
+var c = [];
+
+for (var i = 0; i < b.length; i++) {
+
+    if (a[i] != b[i]) {
+
+        var d = a.slice(i, i+1);
+        var e = b.slice(i, i+1);
+
+        //c[i] = a[i] + b[i];
+       // c[i] = b[i];
+    }
+   // else if (b[i] != a[i]) {
+      //  c[i] = b[i];
+   // }
+}
+
+document.write("<p>" + a);
+//document.write("<p>" + b);
+//document.write("<p>" + c);
+//document.write("<p>" + d);
+document.write("<p>" + e);
+
+
+
+
+//////// ques 8 //////
+
+for (var i = 1; i <= 15; i++) {
+    document.write(i + " ,"); 
+} 
+
+document.write("<br>");
+
+for (var i = 10; i >= 1; i--) {
+    document.write( i + " ,");
+}
+
+document.write("<br>");
+
+for (var i = 0; i <= 20; i+=2) {
+    document.write( i + " ,");
+}
+
+document.write("<br>");
+
+for (var i = 1; i <= 20; i+=2) {
+    document.write( i + " ,");
+}
+
+document.write("<br>");
+
+for (var i = 2; i <= 20; i+=2) {
+    document.write( i + "k" + " ,");
+}
+
+
+
+
+///////////// ques 9 //////////////
+
+var A = [24, 53, 78, 91, 12];
+for (var i = 0; i < A.length; i++) {
+
+    if (A[i] > A[i+1]) {
+        alert("is greater");
+    }
+}
 
 
 
