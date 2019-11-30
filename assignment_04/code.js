@@ -54,6 +54,42 @@ document.write(Math.floor(Math.random()) + "<br>")
 
 ///////// ques 07 //////////
 
+var string = 'The quick brown fox jumps over the lazy dog';
+var count = (temp.match(/the/g) || []).length;
+console.log('word the occurs ' + count + ' times')
+
+
+///////////// ques 09 //////////
+
+
+var html = "<p><strong><em>Only print this</p></strong></em>";
+var clean_text = html.text();
+console.log(clean_text)
+
+
+//// ques 10 //////
+
+var decimal_numbers = 1.08899;
+console.log(decimal_numbers.toFixed(2))
+
+
+///// ques 11 ///////
+var number = 444;
+console.log(math.mean(number))
+
+
+//////// ques 15 //////
+
+var age = prompt("Enter your age ");
+var current_date = new Date()
+var birthday = console.log("your birth year is " current_date.getFullYear() - age )
+
+
+
+
+
+
+
 
 
 
