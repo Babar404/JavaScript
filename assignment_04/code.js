@@ -87,6 +87,97 @@ var birthday = console.log("your birth year is " current_date.getFullYear() - ag
 
 
 
+///////////  ques 8  /////
+
+function numToWords(num) {
+
+    var ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+
+    var tens = ["", "", "twenty", "thirty", "forty","fifty", "sixty", "seventy", "eighty", "ninety"];
+
+    if (num < 20) {
+        return ones[num];
+    }
+    else if (num >= 20 && num < 100) {               //for two digits
+        
+        var sNum = num.toString();                  //convert to string
+        var firstChar = sNum.charAt(0);             //separating first string
+        var secondChar = sNum.charAt(1);            //separating second string
+
+        var firstDigit = parseInt(firstChar);       //convert to number
+        var secondDigit = parseInt(secondChar);     //convert to number
+
+        return tens[firstDigit] + " " + ones[secondDigit];
+    }
+    else if (num >= 100 && num < 1000) {               //for three digits
+        
+        var sNum = num.toString();                  //convert to string
+        var firstChar = sNum.charAt(0);             //separating first string
+        var secondChar = sNum.charAt(1);            //separating second string
+        var thirdChar = sNum.charAt(2);            //separating third string
+
+        var firstDigit = parseInt(firstChar);       //convert to number
+        var secondDigit = parseInt(secondChar);     //convert to number
+        var thirdDigit = parseInt(thirdChar);     //convert to number
+
+        return ones[firstDigit] + " " + "hundred" + " and " + tens[secondDigit] + " " + ones[thirdDigit];
+    }
+    else {
+        document.write("Not Found");
+    }
+
+}
+
+
+document.write(numToWords(999));
+
+
+document.write("<br>" + "</br>"); //two new lines
+
+
+
+////////// ques12 ///////
+
+var rightNow = new Date();
+var theDate = rightNow.getDate();
+
+if (theDate < 16) {
+    document.write("First fifteen days of the month");
+}
+else {
+    document.write("Last days of the month");    
+}
+
+
+
+document.write("<br>" + "</br>"); //two new lines
+
+/////////// ques13 //////
+
+var rightNow = new Date();
+var mSec = rightNow.getTime();
+var min = mSec / (1000*60);
+
+document.write("Current Time: " + rightNow);
+document.write("<br>" + "Elapsed miliseconds since Jan 1, 1970: " + mSec);
+document.write("<br>" + "Elapsed minutes since Jan 1, 1970: " + min);
+
+
+document.write("<br>" + "</br>"); //two new lines
+
+/////////// ques14 ////////
+
+var d = new Date();
+var currentHours = d.getHours();   //extracting hours
+var d1 = new Date();
+var resetHours = d1.setHours(currentHours - 1);  //setting new hours in the new date object "d1"
+
+document.write("Current Date: " + d);
+document.write("<br>" + "1 hour ago, it was " + d1);
+
+
+
+
 
 
 
